@@ -1,3 +1,10 @@
+<script setup lang="ts">
+interface Props {
+  class?: string;
+}
+defineProps<Props>();
+</script>
+
 <template>
   <svg
     class="w-6 h-6"
@@ -19,10 +26,3 @@
     </defs>
   </svg>
 </template>
-
-<script setup lang="ts">
-export interface Props {
-  class?: string;
-}
-defineProps<Props>();
-</script>

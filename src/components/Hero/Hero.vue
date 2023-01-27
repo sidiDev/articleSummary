@@ -2,7 +2,7 @@
   <section class="custom-screen py-24">
     <div className="max-w-2xl mx-auto text-center space-y-6">
       <h1 className="text-gray-800 font-bold text-4xl sm:text-6xl">
-        Generate your video summary
+        Generate your article summary
         <span
           class="text-transparent bg-clip-text h-14 bg-gradient-to-r from-purple-500 to-pink-500"
         >
@@ -10,8 +10,8 @@
         </span>
       </h1>
       <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
-        Video summary is a web-based tool that automatically creates a short
-        summary of any video, to quickly share the main points of the video.
+        Article summary is a web-based tool that automatically creates a short
+        summary of any article, to quickly share the main points of the Article.
       </p>
       <div>
         <router-link

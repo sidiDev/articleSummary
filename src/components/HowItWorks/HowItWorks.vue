@@ -14,8 +14,8 @@ type Steps = {
 const stepsList: Steps[] = [
   {
     num: "01",
-    name: "Add your video url",
-    desc: "Copy and paste your full video url to genertate the summary.",
+    name: "Add your article url",
+    desc: "Copy and paste your full article url to genertate the summary.",
     icon: IconUrl,
   },
   {
@@ -26,8 +26,8 @@ const stepsList: Steps[] = [
   },
   {
     num: "02",
-    name: "Get your video summary",
-    desc: "Congrats your video summary is ready, copy and use it.",
+    name: "Get your article summary",
+    desc: "Congrats your article summary is ready, copy and use it.",
     icon: IconDoc,
   },
 ];
@@ -40,14 +40,14 @@ const stepsList: Steps[] = [
         Learn How It Works
       </h2>
       <p class="mt-6">
-        Generate your own video summary using this AI tool with just 3 easy
+        Generate your own article summary using this AI tool with just 3 easy
         steps
       </p>
     </div>
     <div class="mt-12 max-w-xs mx-auto md:max-w-4xl">
       <ul class="grid gap-10 md:grid-cols-3">
         <li
-          class="relative flex gap-6 lg:block"
+          class="relative flex gap-6 md:block"
           v-for="(step, idx) in stepsList"
           :key="idx"
         >
@@ -58,7 +58,7 @@ const stepsList: Steps[] = [
           </div>
           <span
             v-if="idx + 1 != stepsList.length"
-            class="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 md:left-auto md:top-[18px] md:h-px md:w-[calc(100%_-_72px)]"
+            class="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 md:right-0 md:left-auto md:top-[18px] md:h-px md:w-[calc(100%_-_72px)]"
           ></span>
           <div class="space-y-2 md:mt-8">
             <h3 class="font-medium">{{ step.num }}</h3>
