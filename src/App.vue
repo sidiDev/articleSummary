@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Footer from "./components/Footer/Footer.vue";
 import Navbar from "./components/Navbar/Navbar.vue";
 import { RouterLink, RouterView } from "vue-router";
 </script>
@@ -6,4 +7,5 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <Navbar />
   <RouterView />
+  <Footer />
 </template>

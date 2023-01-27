@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="w-5 h-5 text-gray-800"
+    class="w-5 h-5"
     :class="class"
     viewBox="0 0 48 48"
     fill="none"

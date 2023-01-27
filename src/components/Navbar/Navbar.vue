@@ -6,7 +6,7 @@ import IconGithub from "../icons/IconGithub.vue";
 <template>
   <nav class="border-b">
     <div
-      class="custom-screent flex flex-wrap items-center justify-between gap-6 py-6 text-gray-600"
+      class="custom-screen flex flex-wrap items-center justify-between gap-6 py-6 text-gray-600"
     >
       <router-link to="/">
         <Brand />

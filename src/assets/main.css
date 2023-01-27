@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-screent {
+.custom-screen {
     @apply max-w-screen-xl mx-auto px-4 lg:px-8;
 }
