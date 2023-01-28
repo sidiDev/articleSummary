@@ -1,6 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
 
-const apiKey = import.meta.env.OPENAI_API_KEY
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY
 
 const configuration = new Configuration({
   apiKey
@@ -16,7 +16,7 @@ export default async function generateSummary(prompt: string) {
     max_tokens: 3065,
     top_p: 1,
     frequency_penalty: 0,
-    presence_penalty: 1,
+    presence_penalty: 0
   });
 
   return res.data.choices[0].text
