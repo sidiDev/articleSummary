@@ -29,10 +29,11 @@ const urlValidator = (url: string) => {
 const handleSubmit: EventListener = () => {
   urlError.value = "";
   if (urlValidator(articleUrl.value)) {
+    const prompt = "Rewrite this article in a professional way in";
     const langs: Langs = {
-      eng: "Rewrite this article in a professional way",
-      ar: "أعد كتابة هذه المقالة بطريقة احترافية",
-      fr: "Réécrivez cet article de manière professionnelle",
+      eng: `${prompt} english`,
+      ar: `${prompt} arabic`,
+      fr: `${prompt} french`,
     };
 
     if (!isLoading.value) {
