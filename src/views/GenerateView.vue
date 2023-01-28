@@ -30,9 +30,9 @@ const handleSubmit: EventListener = () => {
   urlError.value = "";
   if (urlValidator(articleUrl.value)) {
     const langs: Langs = {
-      eng: "Write a professional summary for this article",
-      ar: "اكتب ملخصًا احترافيًا لهذه المقالة",
-      fr: "Rédigez un résumé professionnel pour cet article",
+      eng: "Rewrite this article in a professional way",
+      ar: "أعد كتابة هذه المقالة بطريقة احترافية",
+      fr: "Réécrivez cet article de manière professionnelle",
     };
 
     if (!isLoading.value) {
