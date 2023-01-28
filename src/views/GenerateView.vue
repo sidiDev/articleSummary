@@ -62,6 +62,7 @@ const handleSubmit: EventListener = () => {
           <Label for="url"> Enter article URL </Label>
           <Input
             required
+            autocomplete="off"
             type="text"
             placeholder="https://floatui.com/blog/what-is-new-in-float-ui"
             class="w-full mt-2"
