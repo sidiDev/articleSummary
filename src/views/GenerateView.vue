@@ -5,7 +5,7 @@ import Label from "../components/Label/Label.vue";
 import Input from "../components/Input/Input.vue";
 import Select from "../components/Select/Select.vue";
 import { ref } from "vue";
-import generateSummary from "@/lib/generateSummary";
+// import generateSummary from "@/lib/generateSummary";
 import axios from "axios";
 
 type Langs = {
@@ -39,18 +39,24 @@ const handleSubmit: EventListener = () => {
 
     if (!isLoading.value) {
       isLoading.value = true;
-      generateSummary(`${langs[language.value]}: ${articleUrl.value}`).then(
-        (summary) => {
-          articleSummary.value = summary;
+      // generateSummary(`${langs[language.value]}: ${articleUrl.value}`).then(
+      //   (summary) => {
+      //     articleSummary.value = summary;
+      //     isLoading.value = false;
+      //   }
+      // );
+      axios
+        .post(`${window.location.origin}/api/generate`, {
+          data: {
+            promptChat: `${langs[language.value]}: ${articleUrl.value}`,
+          },
+        })
+        .then((res) => {
+          articleSummary.value = res.data.summary;
           isLoading.value = false;
-        }
-      );
+        });
     }
   } else urlError.value = "Please enter a correct url";
-  // Test a severless function
-  axios.post(`${window.location.origin}/api/generate`).then((res) => {
-    console.log(res.data);
-  });
 };
 </script>
 
