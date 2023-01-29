@@ -90,7 +90,11 @@ const handleSubmit: EventListener = () => {
           <button
             type="submit"
             class="w-full py-2 bg-gray-800 hover:bg-gray-700 font-medium text-white rounded-lg ring-gray-800 ring-offset-2 focus:ring duration-150"
-            :class="isLoading ? 'cursor-not-allowed' : ''"
+            :class="
+              isLoading
+                ? 'cursor-not-allowed bg-gray-600 hover:bg-gray-600 focus:ring-0'
+                : ''
+            "
           >
             <IconSpinner v-if="isLoading" class="mx-auto my-1" />
             <span v-else> Generate </span>
