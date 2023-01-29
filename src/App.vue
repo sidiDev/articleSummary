@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar.vue";
 import { RouterLink, RouterView } from "vue-router";
 import { inject } from "@vercel/analytics";
 
-inject();
+// inject();
 </script>
 
 <template>

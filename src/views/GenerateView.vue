@@ -6,6 +6,7 @@ import Input from "../components/Input/Input.vue";
 import Select from "../components/Select/Select.vue";
 import { ref } from "vue";
 import generateSummary from "@/lib/generateSummary";
+import axios from "axios";
 
 type Langs = {
   eng: string;
@@ -46,6 +47,10 @@ const handleSubmit: EventListener = () => {
       );
     }
   } else urlError.value = "Please enter a correct url";
+  // Test a severless function
+  axios.post(`${window.location.origin}/api/generate`).then((res) => {
+    console.log(res.data);
+  });
 };
 </script>
 
