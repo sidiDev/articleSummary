@@ -42,16 +42,10 @@ const handleSubmit: EventListener = () => {
       // Here's a great resource to get started with it
       // https://vercel.com/docs/concepts/functions/serverless-functions
 
-      axios
-        .post(`${window.location.origin}/api/generate`, {
-          data: {
-            promptChat: `${langs[language.value]}: ${articleUrl.value}`,
-          },
-        })
-        .then((res) => {
-          articleSummary.value = res.data.summary;
-          isLoading.value = false;
-        });
+      axios.get(`${window.location.origin}/api/generate`).then((res) => {
+        articleSummary.value = res.data.summary;
+        isLoading.value = false;
+      });
     }
   } else urlError.value = "Please enter a correct url";
 };
