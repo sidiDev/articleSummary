@@ -43,7 +43,7 @@ const handleSubmit: EventListener = () => {
       // https://vercel.com/docs/concepts/functions/serverless-functions
 
       axios
-        .post(`${window.location.origin}/api/generate`, {
+        .post(`/api/generate`, {
           data: {
             promptChat: `${langs[language.value]}: ${articleUrl.value}`,
           },
