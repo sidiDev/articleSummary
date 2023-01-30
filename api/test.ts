@@ -5,5 +5,5 @@ export default async function handler(
   res: VercelResponse,
 ) {
 
-  res.json({hello: "Hello world"})
+  res.json({success: "Hello world"})
 }
