@@ -5,7 +5,7 @@ import Label from "../components/Label/Label.vue";
 import Input from "../components/Input/Input.vue";
 import Select from "../components/Select/Select.vue";
 import { ref } from "vue";
-import axios from "axios";
+import generateSummary from "@/lib/generateSummary";
 
 type Langs = {
   eng: string;
@@ -38,20 +38,15 @@ const handleSubmit: EventListener = () => {
 
     if (!isLoading.value) {
       isLoading.value = true;
-      // We are using vercel serverless functions
-      // Here's a great resource to get started with it
-      // https://vercel.com/docs/concepts/functions/serverless-functions
-
-      axios
-        .post(`${window.location.origin}/api/generate`, {
-          data: {
-            promptChat: `${langs[language.value]}: ${articleUrl.value}`,
-          },
-        })
-        .then((res) => {
-          articleSummary.value = res.data.summary;
+      // Note: This way is not secure, move this functionality to a server,
+      // and use the API to send a request to the server to get the response includes the summary
+      // Or you can use serverless functions to do that.
+      generateSummary(`${langs[language.value]}: ${articleUrl.value}`).then(
+        (summary) => {
+          articleSummary.value = summary;
           isLoading.value = false;
-        });
+        }
+      );
     }
   } else urlError.value = "Please enter a correct url";
 };
