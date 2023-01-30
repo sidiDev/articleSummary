@@ -2,10 +2,6 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 import { Configuration, OpenAIApi } from "openai";
 
-export const config = {
-  runtime: "edge",
-};
-
 const apiKey = process.env.VITE_OPENAI_API_KEY
 
 
