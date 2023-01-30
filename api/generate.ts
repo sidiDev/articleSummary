@@ -2,7 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 import { Configuration, OpenAIApi } from "openai";
 
-const apiKey = process.env.VITE_OPENAI_API_KEY
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY
 
 
 
