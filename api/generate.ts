@@ -15,9 +15,7 @@ export default async function handler(
 
 const { promptChat } = req.body.data
 
-
-    const openai = new OpenAIApi(configuration);
-  
+  const openai = new OpenAIApi(configuration);
   const chatRes = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: promptChat,

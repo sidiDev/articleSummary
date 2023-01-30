@@ -5,7 +5,6 @@ import Label from "../components/Label/Label.vue";
 import Input from "../components/Input/Input.vue";
 import Select from "../components/Select/Select.vue";
 import { ref } from "vue";
-// import generateSummary from "@/lib/generateSummary";
 import axios from "axios";
 
 type Langs = {
@@ -39,12 +38,10 @@ const handleSubmit: EventListener = () => {
 
     if (!isLoading.value) {
       isLoading.value = true;
-      // generateSummary(`${langs[language.value]}: ${articleUrl.value}`).then(
-      //   (summary) => {
-      //     articleSummary.value = summary;
-      //     isLoading.value = false;
-      //   }
-      // );
+      // We are using vercel serverless functions
+      // Here's a great resource to get started with it
+      // https://vercel.com/docs/concepts/functions/serverless-functions
+
       axios
         .post(`${window.location.origin}/api/generate`, {
           data: {
