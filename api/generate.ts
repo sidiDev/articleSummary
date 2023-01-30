@@ -13,7 +13,7 @@ export default async function handler(
   res: VercelResponse,
 ) {
 
-const { promptChat } = req.body.data
+  const { promptChat } = req.body.data
 
   const openai = new OpenAIApi(configuration);
   const chatRes = await openai.createCompletion({
